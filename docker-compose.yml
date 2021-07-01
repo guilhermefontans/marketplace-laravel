@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  webserver:
+    build: .
+    container_name: web_marketplace
+    ports:
+      - '${APP_PORT:-8080}:80'
+    volumes:
+      - ./:/var/www/
+    depends_on:
+      - db
+  db:
+    platform: linux/x86_64
+    container_name: db_marketplace
+    image: mysql
+    ports:
+      - '${DB_PORT}:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_DATABASE: '${DB_DATABASE}'
