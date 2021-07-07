@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/users', function () {
+    $users = \App\User::paginate(10);
+    return $users;
+    return view('welcome');
+});
