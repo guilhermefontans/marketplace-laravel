@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,4 +22,9 @@ Route::get('/users', function () {
     $users = \App\User::paginate(10);
     return $users;
     return view('welcome');
+});
+
+Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function(){
+    Route::resource('stores', 'StoreController');
+    Route::resource('products', 'ProductController');
 });
