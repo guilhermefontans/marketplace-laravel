@@ -151,6 +151,7 @@ return [
         'description' => 'descrição',
         'body' => 'conteúdo',
         'price' => 'preço',
+        'image' => 'Arquivo não é uma imagem válida!'
     ],
 
 ];
