@@ -31,7 +31,7 @@
 
         <div class="form-group">
             <label>Conteúdo</label>
-            <<textarea name="body" id="" cols="30" rows="10" class="form-control @error('body') is-invalid @enderror">{{$product->body}}</textarea>
+            <textarea name="body" id="" cols="30" rows="10" class="form-control @error('body') is-invalid @enderror">{{$product->body}}</textarea>
 
             @error('body')
             <div class="invalid-feedback">

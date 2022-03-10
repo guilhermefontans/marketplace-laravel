@@ -48,9 +48,6 @@
                 {{$message}}
             </div>
             @enderror
-
-            <label>Slug</label>
-            <input type="text" name="slug" class="form-control">
         </div>
 
         <label>Categorias</label>
@@ -59,7 +56,6 @@
                 <option value="{{$category->id}}">{{$category->name}}</option>
             @endforeach
         </select>
-        </div>
 
         <div class="form-group">
             <label>Fotos do Produto</label>
@@ -69,7 +65,7 @@
                 {{$message}}
             </div>
             @enderror
-
+        </div>
         <div>
             <button type="submit" class="btn btn-lg btn-success">Criar Produto</button>
         </div>

@@ -11,7 +11,6 @@ services:
     depends_on:
       - db
   db:
-    platform: linux/x86_64
     container_name: db_marketplace
     image: mysql
     ports:
